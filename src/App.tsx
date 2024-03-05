@@ -15,8 +15,8 @@ function App() {
  
       <Show above="lg">  <GridItem area="aside"  >Aside</GridItem>  </Show>
       <GridItem area="main"  >
-        {/* Main */}
-        {/* <GameGrid/> */}
+ 
+        <GameGrid/>
         </GridItem>  
     </Grid>
   );
@@ -26,3 +26,7 @@ export default App;
 
  
  
+
+
+// Creating custom hook for fetching data
+
