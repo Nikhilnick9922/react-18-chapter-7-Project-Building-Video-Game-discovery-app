@@ -1,16 +1,34 @@
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
 
 function App() {
-  return <Button colorScheme="blue">Button</Button>; // we see ugly outline , this is not comming from chakra
-  // this is default coming from `vit project` , delete styles from index.css
+  return (
+    <Grid
+      // templateAreas={`"nav nav" "aside main"`}>
+      templateAreas={ {
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`
+       
+      }}>
+      <GridItem area="nav" bg="coral">Nav</GridItem>  
+      {/* <GridItem area="aside" bg="gold">Aside</GridItem>  */}
+      <Show above="lg">  <GridItem area="aside" bg="gold">Aside</GridItem>  </Show>
+      <GridItem area="main" bg="dodgerblue">Main</GridItem>  
+    </Grid>
+  );
 }
 
 export default App;
 
-//  got to chakra and get started and vit => copy and install dependencies
+// creating a responsive layout
 
-// next is proivder setup -> in main.tsx and import and wrap app
+// we are going to use grid for layout
+ 
 
-// in upcoming we gonna learn about `providers` when we learn about advanced topics
+// now we gonna add object in tempplate areas which act as break point 
+// for more details chakra website -> styled system -> responsive styles 
+// we have sm , md, lg, xl, 2xl this are break points 
 
-// we gonna add button for testing of chakra ui
+// so we have to define 2 break points here 1 for mobile devices and 1 for more than 1024 pixels devices
+ 
+
+  // we wrap aside in `show` to hide in mobile screen
