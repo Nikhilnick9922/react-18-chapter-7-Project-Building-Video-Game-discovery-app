@@ -8,11 +8,4 @@ export default axios.create({
     }
 })
 
-// with this conifguration , this key is encluded in `query-string`
-// of every http request we setn 
-
-// and in documentation there is url that we need to set here.
-
-// we can see the `parameters` on documentation of api -> games  and you can see in bottom full url
-
-
+ 

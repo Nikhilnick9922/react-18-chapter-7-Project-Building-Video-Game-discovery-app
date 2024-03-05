@@ -14,7 +14,10 @@ function App() {
       <GridItem area="nav"  ><NavBar/></GridItem>  
  
       <Show above="lg">  <GridItem area="aside"  >Aside</GridItem>  </Show>
-      <GridItem area="main"  >Main</GridItem>  
+      <GridItem area="main"  >
+        {/* Main */}
+        {/* <GameGrid/> */}
+        </GridItem>  
     </Grid>
   );
 }
@@ -22,18 +25,4 @@ function App() {
 export default App;
 
  
-
-/// Fetching the games 
-
-
-// get api key from `rawg` -> get api key 
-
-// copy api key and use axios 
-
-// no we are going to craete axois with custom configuration and in that we gonna use 
-// api key  `https://rawg.io/
-
-// src-> services -> api-client.ts 
-
-
-// now craete new component `GameGrid`
+ 

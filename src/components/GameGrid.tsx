@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import apiClient from '../services/api-client';
+import { Text } from '@chakra-ui/react';
 
 
 
@@ -22,15 +23,25 @@ const GameGrid = () => {
  
 useEffect(()=>{
     apiClient.get<FecthGamesResponse>('/games')
-    .then(res=> setGames(res.data.results));  // since empty array initlize , use interface
+    .then(res=> setGames(res.data.results))
+    .catch(err=>setError(err.message))
 })
-console.log(games)
+ 
   return (
-    <div>GameGrid</div>
+  <>
+ {error && <Text>{error}</Text>}
+  <ul>
+        {games.map(game=>
+            <li key={game.id}>{game.id} {game.name}</li>)}
+     </ul>
+  </>
   )
 }
 
 export default GameGrid
 
 
-// now craete interface for that you can see insponse object in documentation
+ // here we not going to render the images and so on ,
+ // we just want to render simple unordered list 
+
+
