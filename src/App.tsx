@@ -1,5 +1,6 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   return (
@@ -22,6 +23,17 @@ export default App;
 
  
 
-// Building the swtich to add color mode
+/// Fetching the games 
 
 
+// get api key from `rawg` -> get api key 
+
+// copy api key and use axios 
+
+// no we are going to craete axois with custom configuration and in that we gonna use 
+// api key  `https://rawg.io/
+
+// src-> services -> api-client.ts 
+
+
+// now craete new component `GameGrid`
