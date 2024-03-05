@@ -12,8 +12,8 @@ function App() {
       }}>
       <GridItem area="nav"  ><NavBar/></GridItem>  
  
-      <Show above="lg">  <GridItem area="aside" bg="gold">Aside</GridItem>  </Show>
-      <GridItem area="main" bg="dodgerblue">Main</GridItem>  
+      <Show above="lg">  <GridItem area="aside"  >Aside</GridItem>  </Show>
+      <GridItem area="main"  >Main</GridItem>  
     </Grid>
   );
 }
@@ -21,3 +21,7 @@ function App() {
 export default App;
 
  
+
+// Building the swtich to add color mode
+
+
