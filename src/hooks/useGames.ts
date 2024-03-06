@@ -21,10 +21,7 @@ interface Platform {
     background_image :string;
     parent_platforms : {platform : Platform}[],
 }
-// tricky part - parent_platforms is not `Platform[]` ,
-// it's array of object where each object has property called platform ,which is type Platform
-// this is design
-
+ 
 
 
 

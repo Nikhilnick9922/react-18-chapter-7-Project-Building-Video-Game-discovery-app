@@ -28,7 +28,5 @@ export default App;
 
 // Displaying platform Icons 
 
-
-// in responce -> result -> platforms its problematic , so we have to deal with it.
-
-// first thing  we want to add parent platform property to `game interce`
+ 
+// npm i react-icons@4.7.1

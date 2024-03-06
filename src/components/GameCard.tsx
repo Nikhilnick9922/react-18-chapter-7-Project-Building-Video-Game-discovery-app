@@ -1,5 +1,6 @@
 import { Game } from '../hooks/useGames'
 import { Card, CardBody, Heading, Image, Text } from '@chakra-ui/react'
+import PlatformIconsList from './PlatformIconsList'
 
 
 interface GameCardProps {
@@ -12,7 +13,9 @@ const GameCard = ({game}: GameCardProps) => {
     <Image src={game.background_image} />
     <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
-      {game.parent_platforms.map(({platform})=><Text key={platform.id}>{platform.name}</Text>)}
+      {/* {game.parent_platforms.map(({platform})=><Text key={platform.id}>{platform.name}</Text>)} */}
+      <PlatformIconsList platforms={game.parent_platforms.map(p=>p.platform)} />
+       {/* because of design smell, has to do ugly mapping  */}
     </CardBody>
    </Card>
   )
@@ -20,9 +23,9 @@ const GameCard = ({game}: GameCardProps) => {
 
 export default GameCard
 
+ 
 
- // we want to do this as step by step ,
- // we just want to render plain text for platform to get started
-
- // we don't see name and id dictly because each object has platform property
- // so destructure and grab platform property
+//  to render the icons we need mapping between  name of the platform and Icon 
+ // we don't want to do mapping here , because it's destraction from what the component is 
+ // supposed to do
+ // so we gonna move this entire logic for platform in seperate component 
