@@ -25,9 +25,10 @@ function App() {
 export default App;
 
  
- 
- // Building game cards
+
+// Displaying platform Icons 
 
 
- // replace bullet points with game card
- 
+// in responce -> result -> platforms its problematic , so we have to deal with it.
+
+// first thing  we want to add parent platform property to `game interce`

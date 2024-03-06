@@ -1,6 +1,5 @@
-import React from 'react'
 import { Game } from '../hooks/useGames'
-import { Card, CardBody, Heading, Image } from '@chakra-ui/react'
+import { Card, CardBody, Heading, Image, Text } from '@chakra-ui/react'
 
 
 interface GameCardProps {
@@ -13,6 +12,7 @@ const GameCard = ({game}: GameCardProps) => {
     <Image src={game.background_image} />
     <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
+      {game.parent_platforms.map(({platform})=><Text key={platform.id}>{platform.name}</Text>)}
     </CardBody>
    </Card>
   )
@@ -21,17 +21,8 @@ const GameCard = ({game}: GameCardProps) => {
 export default GameCard
 
 
+ // we want to do this as step by step ,
+ // we just want to render plain text for platform to get started
 
-// Image has property of backgrond_image (for src) in documentation we need to add to interface of Game 
-// interface
-
-
-//round cornders on botton but not on top ?, because image is bigger than it's container
-// overflow hidden 
-
-
-// size of heading 
-
-
-// now for columns in different sizes go to `GameGrid`
-
+ // we don't see name and id dictly because each object has platform property
+ // so destructure and grab platform property

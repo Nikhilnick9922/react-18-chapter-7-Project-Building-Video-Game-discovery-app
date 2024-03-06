@@ -3,16 +3,29 @@ import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 
 
- export interface Game {
-    id:number;
-    name: string;
-    background_image :string;
-}
 
 interface FecthGamesResponse {
     count : number;
     results :  Game[]
 }
+
+interface Platform {
+    id: number,
+    name: string,
+    slug: string,
+}
+
+ export interface Game {
+    id:number;
+    name: string;
+    background_image :string;
+    parent_platforms : {platform : Platform}[],
+}
+// tricky part - parent_platforms is not `Platform[]` ,
+// it's array of object where each object has property called platform ,which is type Platform
+// this is design
+
+
 
 
 
@@ -28,7 +41,7 @@ const useGames =()=>{
        { if(err instanceof CanceledError) return;
         setError(err.message)})
     return ()=> controller.abort();
-},[])
+},[]) 
 
 return {games ,error}
 }
