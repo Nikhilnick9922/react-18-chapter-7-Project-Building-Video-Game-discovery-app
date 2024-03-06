@@ -26,7 +26,8 @@ export default App;
 
  
  
+ // Building game cards
 
 
-// Creating custom hook for fetching data
-
+ // replace bullet points with game card
+ 
