@@ -26,15 +26,8 @@ export default App;
 
  
  
-//  Improving User Experience with loading skeleton
+//  refactorying duplicated styles
 
 
-// first we need to track the loading state in our hook 
-
-
-//  we gonna make skeleton component , so we load that while images is loaded
-
-// border radius same apply
-
-
-// we gonna resolve duplication in next 
+// we have to create another component which is going to be container for those 
+// cards , and then we gonna aplly to that container

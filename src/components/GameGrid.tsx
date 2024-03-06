@@ -3,6 +3,7 @@ import { SimpleGrid, Text } from '@chakra-ui/react';
 import useGames from '../hooks/useGames';
 import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
+import GameCardContainer from './GameCardContainer';
 
  
 
@@ -17,9 +18,10 @@ const GameGrid = () => {
     <>
         {error && <Text>{error}</Text>}
          <SimpleGrid   spacing={10} columns={{sm:1, md:2, lg:3,xl:4} } padding={10}>
-          {isLoading && skeletons.map(skeleton=><GameCardSkeleton key={skeleton}/>)}
+          {isLoading && skeletons.map(skeleton=> <GameCardContainer><GameCardSkeleton key={skeleton}/></GameCardContainer>)}
             {games.map(game=>
-         <GameCard key={game.id} game={game} />  )}
+       
+       <GameCardContainer> <GameCard key={game.id} game={game} /> </GameCardContainer> )}
         </SimpleGrid>
     </>
     )
@@ -27,10 +29,8 @@ const GameGrid = () => {
 
 export default GameGrid
 
+
+// and wrap those components in this 
  
  
-// created array to repeat map with skeptos cards 
-
-
-// we have layout issue on refresh because skeletons don't have same width as cards
-// we will refactor width later  
+ 
