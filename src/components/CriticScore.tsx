@@ -18,8 +18,4 @@ export default CriticScore
 
 
 
-
-/// we also have to improve look and feel of badge based on score
-// color for for font only and colorScheme gives whole color 
-
-// and we have used nested ternary for 3 conditions
+ 

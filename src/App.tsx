@@ -26,10 +26,4 @@ export default App;
 
  
  
-
-// dipslaying critic score
-
-
-// in response we have metacritc for critc score
-// and we don't want to impliment all logic in game cart because that is 
-// destraction 
+ 
