@@ -26,4 +26,15 @@ export default App;
 
  
  
- 
+//  Improving User Experience with loading skeleton
+
+
+// first we need to track the loading state in our hook 
+
+
+//  we gonna make skeleton component , so we load that while images is loaded
+
+// border radius same apply
+
+
+// we gonna resolve duplication in next 

@@ -11,9 +11,8 @@ interface GameCardProps {
 
 const GameCard = ({game}: GameCardProps) => {
   return (
-   <Card borderRadius={10} overflow={'hidden'}>
-    {/* <Image src={game.background_image} /> */}
-    <Image src={ getCroppedImageUrl(game.background_image)} />
+   <Card borderRadius={10} overflow={'hidden'} width={"300px"}>
+     <Image src={ getCroppedImageUrl(game.background_image)} />
     <CardBody>
         <Heading fontSize={'2xl'}>{game.name}</Heading>
     <HStack justifyContent={'space-between'}>
@@ -28,5 +27,4 @@ const GameCard = ({game}: GameCardProps) => {
 export default GameCard
 
  
-
- // we want critic score to right , so we move 2 comonents in HStack
+ 

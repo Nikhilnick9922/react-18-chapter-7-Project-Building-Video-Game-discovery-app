@@ -10,4 +10,4 @@ export default getCroppedImageUrl;
 
 
 
-//  we have done beautiful slicing here
+ 
