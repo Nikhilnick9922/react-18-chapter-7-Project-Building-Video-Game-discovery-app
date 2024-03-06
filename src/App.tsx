@@ -29,4 +29,3 @@ export default App;
 // Displaying platform Icons 
 
  
-// npm i react-icons@4.7.1

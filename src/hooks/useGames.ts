@@ -9,7 +9,7 @@ interface FecthGamesResponse {
     results :  Game[]
 }
 
-interface Platform {
+ export interface Platform {
     id: number,
     name: string,
     slug: string,
