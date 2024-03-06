@@ -30,7 +30,6 @@ const GameGrid = () => {
 export default GameGrid
 
 
-// and wrap those components in this 
- 
+  
  
  

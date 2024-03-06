@@ -19,7 +19,4 @@ export default GameCardContainer
 
 
 
-
-// box returns div when rendered
-
-// now pass game card and skeleton to child to this 
+ 

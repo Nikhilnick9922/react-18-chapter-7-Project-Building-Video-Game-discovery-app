@@ -13,6 +13,4 @@ const GameCardSkeleton = () => {
 
 export default GameCardSkeleton
 
-
-
-// skeleton value are arbitory , we have to play and mimic to original
+ 

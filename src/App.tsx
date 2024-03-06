@@ -1,6 +1,7 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
+import GenereList from "./components/GenereList";
 
 function App() {
   return (
@@ -13,7 +14,12 @@ function App() {
       }}>
       <GridItem area="nav"  ><NavBar/></GridItem>  
  
-      <Show above="lg">  <GridItem area="aside"  >Aside</GridItem>  </Show>
+      <Show above="lg">  <GridItem area="aside"  >
+        {/* Aside */}
+        <GenereList/>
+        </GridItem>  </Show>
+     
+     
       <GridItem area="main"  >
  
         <GameGrid/>
@@ -25,9 +31,5 @@ function App() {
 export default App;
 
  
- 
-//  refactorying duplicated styles
+ // Fetching the generas - side panel
 
-
-// we have to create another component which is going to be container for those 
-// cards , and then we gonna aplly to that container
