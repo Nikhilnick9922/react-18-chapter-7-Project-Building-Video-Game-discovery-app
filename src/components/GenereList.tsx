@@ -1,23 +1,29 @@
+import { HStack, Image, List, ListItem, Text } from '@chakra-ui/react';
 import   useGenres from '../hooks/useGenres'
+import getCroppedImageUrl from '../services/image-url';
 
 const GenereList = () => {
-   // const {data  }=  useData<Genre>("/genres")
-   const {data  }=  useGenres();
+    const {data  }=  useGenres();
   return (
-     <ul>
-        {data.map(genre=><li key={genre.id}>{genre.name}</li>)}
-     </ul>
+     <List>
+        {data.map(genre=><ListItem key={genre.id}>
+         <HStack paddingY={1.5}  >
+       <Image boxSize={"32px"} borderRadius={8} src= {getCroppedImageUrl(genre.image_background)} /> 
+      <Text fontSize={"lg"}>  {genre.name} </Text>
+         </HStack>
+        </ListItem>)}
+     </List>
   )
 }
 
 export default GenereList
 
+ 
 
-// have to export Genre interface from useGenre module  
-// and also need to pass `EndPoint`
+//   use List for without bullet point 
 
-// working but component is know about our endpoints , we should avoid this ,
-// this all endponit and Genre interface should move to useGenres hook
+// HStack for lining horizontally
 
+// and Text for name 
 
-// also have to do same for games 
+// for left padding in app > container add padding
