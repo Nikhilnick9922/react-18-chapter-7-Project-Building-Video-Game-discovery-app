@@ -31,5 +31,11 @@ function App() {
 export default App;
 
  
- // Fetching the generas - side panel
+ // Creating a Generic Data Fetching Hook
 
+
+
+// we have craeted 2 hooks identical 
+
+
+// copy from useGenres -> and remove genre refrence or make it generic
