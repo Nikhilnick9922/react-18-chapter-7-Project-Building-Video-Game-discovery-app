@@ -32,6 +32,3 @@ export default GameGrid
 
   
  
-// replace game with generic type which is data in this case
- 
-// reduce `spacing` to 3
