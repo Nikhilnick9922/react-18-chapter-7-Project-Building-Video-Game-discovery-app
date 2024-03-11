@@ -10,7 +10,8 @@ interface FetchResponse<T> {
     results : T[]
 
 }
- const useData = <T>(endPoint : string , requestConfig? : AxiosRequestConfig , deps?: any[])=>{
+// deps has to be optional since previous is optional
+ const useData = <T>(endPoint : string ,requestConfig?: AxiosRequestConfig , deps?:any )=>{
     const [data, useData] = useState<T[]>([]);
     const [error, setError] = useState ("");
     const [isLoading , setLoding] = useState(false);
@@ -18,7 +19,7 @@ interface FetchResponse<T> {
     useEffect(()=>{
     const controller = new AbortController();
     setLoding(true);
-     apiClient.get<FetchResponse<T>>(endPoint , {signal: controller.signal, ...requestConfig})
+     apiClient.get<FetchResponse<T>>(endPoint , {signal: controller.signal, ...requestConfig} )
     .then(res=> {
         useData(res.data.results);
         setLoding(false)        
@@ -28,25 +29,13 @@ interface FetchResponse<T> {
         setError(err.message);
          setLoding(false)})        
     return ()=> controller.abort();
-},deps? [ ...deps] : []) 
-// after doing all changes it's not working because it only fetch data on first time
-// we can't spread undefined array
+},deps?[...deps]: []) 
+
 return {data ,error ,isLoading}
 }
 
 
 export default useData;
 
-
-
-
- // we can pass data in request body and we pass query string and so on in `axios request config object`
-// we want the second parameter as optional
-
-
-
-//  we can check in documentation -> games -> get a list of Games 
-/// we can check which string we can take to filter  , we pass genreId or slug
-
-
-// we need to spread requestConfig , after singal 
+// if there is deps then we speading or else same as previous `[]`
+ 
