@@ -4,6 +4,7 @@ import GameGrid from "./components/GameGrid";
 import GenereList from "./components/GenereList";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
+import PlatformSelector from "./components/PlatformSelector";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState <Genre | null>(null); // null because no genre selected
@@ -26,17 +27,16 @@ function App() {
         lg: '200px 1fr'     
       }}
       >   
-      
+    
       <GridItem area="nav"  ><NavBar/></GridItem>  
  
       <Show above="lg">  <GridItem area="aside" paddingX={5}  >
-        {/* Aside */}
-        <GenereList selectedGenre={selectedGenre} onSelectGenre={(genre)=>setSelectedGenre(genre)}/>
+         <GenereList selectedGenre={selectedGenre} onSelectGenre={(genre)=>setSelectedGenre(genre)}/>
         </GridItem>  </Show>
      
      
       <GridItem area="main"  >
- 
+      <PlatformSelector/>
         <GameGrid selectedGenre={selectedGenre}/>
         </GridItem>  
     </Grid>
@@ -48,7 +48,23 @@ export default App;
  
  
  
- // Highligting the selected Genre
+//  Building   platform Selectors
 
 
- // passed selectedGenre in genreList and rendered bold in button dynamically
+// first of all we will only focus on rendering the list, then later in next 
+// part we will focun on filtering .
+
+// to render the list of dropdown list of platforms we need different API, we can find 
+// that in documentation -> platforms -> list of parent platforms  -> get
+
+
+// now we need to create the hook , to fectch data from this endpoint
+
+
+// we can create custom hook for fetching any kind of data with very little code .
+
+
+ 
+
+
+
