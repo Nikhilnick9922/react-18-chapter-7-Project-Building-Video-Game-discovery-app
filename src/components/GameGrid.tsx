@@ -37,8 +37,4 @@ const GameGrid = ({selectedGenre }: Props) => {
 export default GameGrid
 
 
-  
- // made the changes in both places
-
-
- // also need to pass SelectedGenre to gameshook
+ 

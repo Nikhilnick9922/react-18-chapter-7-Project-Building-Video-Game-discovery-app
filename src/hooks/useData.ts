@@ -10,8 +10,7 @@ interface FetchResponse<T> {
     results : T[]
 
 }
-// deps has to be optional since previous is optional
- const useData = <T>(endPoint : string ,requestConfig?: AxiosRequestConfig , deps?:any )=>{
+  const useData = <T>(endPoint : string ,requestConfig?: AxiosRequestConfig , deps?:any )=>{
     const [data, useData] = useState<T[]>([]);
     const [error, setError] = useState ("");
     const [isLoading , setLoding] = useState(false);
@@ -37,5 +36,4 @@ return {data ,error ,isLoading}
 
 export default useData;
 
-// if there is deps then we speading or else same as previous `[]`
- 
+  

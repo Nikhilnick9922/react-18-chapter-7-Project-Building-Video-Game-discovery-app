@@ -7,8 +7,7 @@ import { Genre } from "./hooks/useGenres";
 
 function App() {
   const [selectedGenre, setSelectedGenre] = useState <Genre | null>(null); // null because no genre selected
-  // typescript does not know , in future what it will going to save so pass Genre interface
- 
+  
  
  
   
@@ -32,7 +31,7 @@ function App() {
  
       <Show above="lg">  <GridItem area="aside" paddingX={5}  >
         {/* Aside */}
-        <GenereList onSelectGenre={(genre)=>setSelectedGenre(genre)}/>
+        <GenereList selectedGenre={selectedGenre} onSelectGenre={(genre)=>setSelectedGenre(genre)}/>
         </GridItem>  </Show>
      
      
@@ -48,26 +47,8 @@ export default App;
 
  
  
-// Filtering Games by Genres
-
-
-// we have unique key error , since we wrapeed GameCardSkeleton with container in 2 places 
-// and in platformIconlist also
-
-
-
-// we need to share the `selected Genre`  with gameGrid , so how can we share `states` between
-// two components
-// we should liefted up with closest parent , which is app component
-
-
-// we have to mention that selectedGnere can hold <Genre | null >
-
-
-
-
-
-
  
- 
- 
+ // Highligting the selected Genre
+
+
+ // passed selectedGenre in genreList and rendered bold in button dynamically

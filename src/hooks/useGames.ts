@@ -31,17 +31,4 @@ export default useGames;
 
  
 
-
-// also need here selectedGenre
-
-// also we need to pass it to useData which currently taking only endpoint ,
-// we have pass the genre to dataHook , we have to make more flexible by giving 
-// `axios request config object`
-
-
-// we can use params which property of `AxiosRequestConfig` 
-
-// since selectedGenre can be null we use `?` for optional chaining 
-
-
-// now pass value here for selectedGenre for dependencies 
+ 
