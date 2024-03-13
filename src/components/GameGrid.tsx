@@ -5,20 +5,22 @@ import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContainer from './GameCardContainer';
 import { Genre } from '../hooks/useGenres';
+import { GameQuery } from '../App';
 
  
 interface Props {
-  selectedGenre : Genre | null,
-  selectedPlatform : Platform | null
+  gameQuery : GameQuery,
+  // selectedGenre : Genre | null,
+  // selectedPlatform : Platform | null
 }
  
 
-const GameGrid = ({selectedGenre  ,selectedPlatform}: Props) => {
-    const {error,data , isLoading } = useGames(selectedGenre , selectedPlatform);
+// const GameGrid = ({selectedGenre  ,selectedPlatform}: Props) => {
+const GameGrid = ({ gameQuery}: Props) => {
+    // const {error,data , isLoading } = useGames(selectedGenre , selectedPlatform);
+    const {error,data , isLoading } = useGames(gameQuery);
     const skeletons = [1,2,3,4,5,6,7,8]
- // this is where our code get's smelly , but first we want to our code to work , 
- // then we improve 
- // now add this parameter to  hook in useGames and useData
+ 
  
   return (
     <>
@@ -40,4 +42,4 @@ const GameGrid = ({selectedGenre  ,selectedPlatform}: Props) => {
 export default GameGrid
 
 
- 
+//  we want to follow same what we did in app.tsx

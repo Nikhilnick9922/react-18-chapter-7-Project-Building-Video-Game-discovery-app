@@ -1,3 +1,4 @@
+import { GameQuery } from './../App';
 import useData from "./useData";
 import { Genre } from "./useGenres";
 
@@ -23,19 +24,16 @@ import { Genre } from "./useGenres";
 
 
 
-const useGames =(selectedGenre : Genre | null ,selectedPlatform : Platform | null)=> 
+// const useGames =(selectedGenre : Genre | null ,selectedPlatform : Platform | null)=> 
+const useGames =(gameQuery : GameQuery)=> 
                     useData<Game>('/games' , 
-                    {params : {genres : selectedGenre?.id  , platforms : selectedPlatform?.id   }},
-                     [selectedGenre?.id , selectedPlatform?.id])
+                    // {params : {genres : selectedGenre?.id  , platforms : selectedPlatform?.id   }},
+                    //  [selectedGenre?.id , selectedPlatform?.id])
+                    {params : {genres : gameQuery.genre?.id  , platforms : gameQuery.platform?.id   }},
+                     [gameQuery])
     
 
 
 export default useGames;
 
  
-// now pass it to api using parameter object
-// using oppional and also as dependency 
-
-
-// working , but it's not clear which platform is selected in list
-// we need to pass selectedPlatform to 'platformSelector'

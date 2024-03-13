@@ -16,10 +16,8 @@ const PlatformSelector = ({onSelectPlatform ,selectedPlatform} : Props) => {
   return (
   <Menu>
        <MenuButton as ={Button} rightIcon={<BsChevronDown/> }>
-        {/* Platforms */}
-        {selectedPlatform?.name || "Platforms"}
-        {/* you know  */}
-     </MenuButton>
+         {selectedPlatform?.name || "Platforms"}
+      </MenuButton>
      <MenuList>
   
 
@@ -33,5 +31,4 @@ export default PlatformSelector
 
 
 
-//  onClick notify the app component 
- 
+  
