@@ -12,7 +12,8 @@ import SortSelector from "./components/SortSelector";
 
 export interface GameQuery {
   genre: Genre | null,
-  platform : Platform | null
+  platform : Platform | null, 
+  sortOrder : string;
 }
 
  
@@ -46,7 +47,8 @@ function App() {
      
      <HStack spacing={3} padding={2} marginBottom={1}  >
         <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
-        <SortSelector/>
+        <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
+        {/* all done in gameQuery */}
      </HStack>
          <GameGrid gameQuery={gameQuery}  />
         </GridItem>  
@@ -61,11 +63,13 @@ export default App;
   
  
 
-//  Building Sort Selector
+  //  Sorting Games
 
 
-// we gonna add dropdown list for sorting games , 
-// and we will do actuall sorting in next part
+  //  same approach as filtering  sortSelector notifies the app component, and 
+  //  app will pass new sortOrder to gameGrid
 
 
-// PlatForms is not lined up with Grid  , so used padding in HStack and bottom margin to seperate them 
+  // take a look at rawg api -> games_list -> ordering (query parameter) and there is 
+  // values also mentioned ,
+  // if we want to reverse the order then we should pre-fix them with `-` hyphen
