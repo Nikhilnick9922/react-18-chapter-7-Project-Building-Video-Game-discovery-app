@@ -10,15 +10,12 @@ import { GameQuery } from '../App';
  
 interface Props {
   gameQuery : GameQuery,
-  // selectedGenre : Genre | null,
-  // selectedPlatform : Platform | null
+ 
 }
  
 
-// const GameGrid = ({selectedGenre  ,selectedPlatform}: Props) => {
-const GameGrid = ({ gameQuery}: Props) => {
-    // const {error,data , isLoading } = useGames(selectedGenre , selectedPlatform);
-    const {error,data , isLoading } = useGames(gameQuery);
+ const GameGrid = ({ gameQuery}: Props) => {
+     const {error,data , isLoading } = useGames(gameQuery);
     const skeletons = [1,2,3,4,5,6,7,8]
  
  
@@ -42,4 +39,4 @@ const GameGrid = ({ gameQuery}: Props) => {
 export default GameGrid
 
 
-//  we want to follow same what we did in app.tsx
+ 
