@@ -70,4 +70,25 @@ export default App;
 
  
 
-//   Refacotring game Grid
+//   Built our application for production 
+
+
+// we ready to deploy the application , but first we have to built it locally so it 
+// does not have any errors 
+// and it's always faster and easeir to fix this errors locally than wait on deploy on
+
+//  npm run build
+
+// build sucess , but we do have warning , some chunks are larger than 500 KB
+//  we will work on bundle optimization in advance part
+
+
+//  for compile time error let simulate - sortSelector -> onSelectOrder call invalide method
+
+
+// there is another way of build the application via command pallete 
+
+
+// the output of build is folder called `dist` which is distributable
+
+// this is what we distribute to produuction

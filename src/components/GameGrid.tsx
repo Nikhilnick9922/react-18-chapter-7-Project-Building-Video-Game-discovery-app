@@ -23,8 +23,7 @@ interface Props {
  
   return (
  
-      //  {error && <Text>{error}</Text>} 
-         <SimpleGrid   spacing={6} columns={{sm:1, md:2, lg:3,xl:4} } padding={10}>
+          <SimpleGrid   spacing={6} columns={{sm:1, md:2, lg:3,xl:4} } padding={10}>
           {isLoading && skeletons.map(skeleton=> 
           <GameCardContainer key={skeleton}>
             <GameCardSkeleton  />
@@ -40,8 +39,4 @@ interface Props {
 
 export default GameGrid
 
-
-// we either have error or gameGrid , so we don't need to wrap them inside the fragment
-// so we gonna split return statement into the two pieces
-
- // now we don't need fragment
+ 
