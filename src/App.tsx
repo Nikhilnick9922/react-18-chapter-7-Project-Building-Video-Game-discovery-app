@@ -49,13 +49,7 @@ function App() {
      
       <GridItem area="main"  >
      
-      {/* <GameHeading  gameQuery={gameQuery}/>
-     <Flex   padding={2} marginBottom={1}  >
-        <Box marginRight={5}>
-            <PlatformSelector  selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
-        </Box>
-        <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
-      </Flex> */}
+   
 
       <Box padding={2}>
       <GameHeading  gameQuery={gameQuery}/>
@@ -75,12 +69,9 @@ function App() {
 export default App;
 
  
- 
-//   Adding Dynamic Heading 
+//   Clearing up the Genres
 
 
-// changed based on current filteres action -> Action Games ,
-// for platform XBox Action Games
-
-// GameHeading component
-
+// in genres text for `Massively Mulitplayer` is overlaping image ,
+// this is because we use button by default don't wrap text
+// 
