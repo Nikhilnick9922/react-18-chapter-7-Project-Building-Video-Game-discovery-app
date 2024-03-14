@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenereList from "./components/GenereList";
@@ -45,10 +45,12 @@ function App() {
      
       <GridItem area="main"  >
      
-     <HStack spacing={3} padding={2} marginBottom={1}  >
-        <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
+     <Flex   padding={2} marginBottom={1}  >
+        <Box marginRight={5}>
+            <PlatformSelector  selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
+        </Box>
         <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
-      </HStack>
+      </Flex>
          <GameGrid gameQuery={gameQuery}  />
         </GridItem>  
     </Grid>
@@ -60,7 +62,15 @@ export default App;
  
  
   
-// Handling Games Without an Image
+//  Fixing the Issue with Chakra Menus 
 
 
- //  we use default place holder 
+
+// Mosh getting Issue regaring Padding , but we did not get warning 
+//  this is issue he getting after he wrapped platofrmSelector & sortSelector in HStack
+
+// used Flex in place of Hstack , but how can we add space between them ? 
+// we can wrap the PlatoFormSelector in `Box` and give them rightMargin 
+// we used box to get access to css properties in chakra
+
+ 
