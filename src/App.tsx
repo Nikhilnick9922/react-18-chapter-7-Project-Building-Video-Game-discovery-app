@@ -48,8 +48,7 @@ function App() {
      <HStack spacing={3} padding={2} marginBottom={1}  >
         <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
         <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
-        {/* all done in gameQuery */}
-     </HStack>
+      </HStack>
          <GameGrid gameQuery={gameQuery}  />
         </GridItem>  
     </Grid>
@@ -61,15 +60,7 @@ export default App;
  
  
   
- 
-
-  //  Sorting Games
+// Handling Games Without an Image
 
 
-  //  same approach as filtering  sortSelector notifies the app component, and 
-  //  app will pass new sortOrder to gameGrid
-
-
-  // take a look at rawg api -> games_list -> ordering (query parameter) and there is 
-  // values also mentioned ,
-  // if we want to reverse the order then we should pre-fix them with `-` hyphen
+ //  we use default place holder 
