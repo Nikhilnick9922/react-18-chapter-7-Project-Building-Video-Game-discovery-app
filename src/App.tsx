@@ -69,9 +69,9 @@ function App() {
 export default App;
 
  
-//   Clearing up the Genres
 
 
-// in genres text for `Massively Mulitplayer` is overlaping image ,
-// this is because we use button by default don't wrap text
-// 
+// Clearing up the Game Cards 
+
+
+// and spaceing between cards , so gameGrid

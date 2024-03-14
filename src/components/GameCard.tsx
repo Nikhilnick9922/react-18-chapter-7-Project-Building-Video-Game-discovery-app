@@ -14,11 +14,12 @@ const GameCard = ({game}: GameCardProps) => {
     <Card >
      <Image src={ getCroppedImageUrl(game.background_image)} />
     <CardBody>
-        <Heading fontSize={'2xl'}>{game.name}</Heading>
-    <HStack justifyContent={'space-between'}>
+ 
+    <HStack marginBottom={3} justifyContent={'space-between'}>
         <PlatformIconsList platforms={game.parent_platforms.map(p=>p.platform)} />
         <CriticScore score={game.metacritic}/>
     </HStack>
+    <Heading fontSize={'2xl'}>{game.name}</Heading>
      </CardBody>
    </Card>
   )
@@ -27,4 +28,8 @@ const GameCard = ({game}: GameCardProps) => {
 export default GameCard
 
  
- 
+//   moved the Heading after HStack
+
+// some margin to stack
+
+

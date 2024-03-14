@@ -22,7 +22,7 @@ interface Props {
   return (
     <>
         {error && <Text>{error}</Text>}
-         <SimpleGrid   spacing={3} columns={{sm:1, md:2, lg:3,xl:4} } padding={10}>
+         <SimpleGrid   spacing={6} columns={{sm:1, md:2, lg:3,xl:4} } padding={10}>
           {isLoading && skeletons.map(skeleton=> 
           <GameCardContainer key={skeleton}>
             <GameCardSkeleton  />
@@ -40,4 +40,5 @@ export default GameGrid
 
 
  
+//  changed spacing to 6 
  

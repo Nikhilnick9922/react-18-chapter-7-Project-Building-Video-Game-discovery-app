@@ -39,11 +39,4 @@ export default GenereList
  
 
   
-// by default is `nowrap` we changed it to `normal`
-
-// but text is centerly alliged , so need to left aligend
-
-// another is aspect of images is destorted , because images is 600 x 400
-//  objectfit - cover
-
-// and add Heading on top
+ 
