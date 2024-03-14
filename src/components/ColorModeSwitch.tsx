@@ -17,5 +17,4 @@ export default ColorModeSwitch
 
 
  
-//  whitespace -> nowrap to fix issue
-
+ 

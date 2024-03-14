@@ -14,6 +14,7 @@ export interface GameQuery {
   genre: Genre | null,
   platform : Platform | null, 
   sortOrder : string;
+  searchText : string;
 }
 
  
@@ -36,7 +37,9 @@ function App() {
       }}
       >   
     
-      <GridItem area="nav"  ><NavBar/></GridItem>  
+      <GridItem area="nav"  >
+          <NavBar onSearch = {(searchText)=> setGameQuery({...gameQuery,searchText})} />
+      </GridItem>  
  
       <Show above="lg">  <GridItem area="aside" paddingX={5}  >
           <GenereList selectedGenre={gameQuery.genre} onSelectGenre={(genre)=>setGameQuery( {...gameQuery,genre})}/>
@@ -63,11 +66,9 @@ export default App;
  
  
 
-// Building the Search INput
-
-// For searching the games 
-
-// going to be component -> SearchINput.tsx
+//  Searching Games
 
 
-// adding Input to Navbar created wrap issue for colorMode 
+// when user types something , press enters , component notifies app component
+// save text in gameQuery and passed it on game grid
+

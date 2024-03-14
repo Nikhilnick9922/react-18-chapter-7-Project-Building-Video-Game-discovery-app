@@ -30,7 +30,8 @@ import { Genre } from "./useGenres";
                     {params : 
                                 {genres : gameQuery.genre?.id  , 
                                 platforms : gameQuery.platform?.id ,
-                                ordering : gameQuery?.sortOrder   
+                                ordering : gameQuery?.sortOrder   ,
+                                search : gameQuery?.searchText       // added here
                             }},
                      [gameQuery])
     
@@ -39,3 +40,6 @@ import { Genre } from "./useGenres";
 export default useGames;
 
  
+
+//  this is beauty of queryObject, from adding so many elements , we just get all of them 
+// from query object as single
