@@ -70,25 +70,30 @@ export default App;
 
  
 
-//   Built our application for production 
+//  Deploying to vercel
 
 
-// we ready to deploy the application , but first we have to built it locally so it 
-// does not have any errors 
-// and it's always faster and easeir to fix this errors locally than wait on deploy on
+//  vit > deplyiing on a static site
 
-//  npm run build
-
-// build sucess , but we do have warning , some chunks are larger than 500 KB
-//  we will work on bundle optimization in advance part
+// so we want to create repo on github whenever we push code there ,
+// vercel grabs and push it to the production
 
 
-//  for compile time error let simulate - sortSelector -> onSelectOrder call invalide method
+//  use this lines from github to push existing repos to new project
+// git remote add origin https://github.com/Nikhilnick9922/game-hub.git
+// git branch -M main
+// git push -u origin main
 
 
-// there is another way of build the application via command pallete 
+//  push the files to new repo name game-hub
+
+// we need to instal vercel cli for deploying our application
+
+// sudo npm i -g vercel 
+
+//  run vercel to deploy to vercel 
+
+// and login with vercel and follow default settings
 
 
-// the output of build is folder called `dist` which is distributable
-
-// this is what we distribute to produuction
+//  to connect with github , login with github  -> connect with git repos - select and connect
