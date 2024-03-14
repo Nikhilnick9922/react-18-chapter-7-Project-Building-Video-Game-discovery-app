@@ -7,6 +7,7 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGames";
 import SortSelector from "./components/SortSelector";
+import GameHeading from "./components/GameHeading";
 
 
 
@@ -48,12 +49,23 @@ function App() {
      
       <GridItem area="main"  >
      
+      {/* <GameHeading  gameQuery={gameQuery}/>
      <Flex   padding={2} marginBottom={1}  >
         <Box marginRight={5}>
             <PlatformSelector  selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
         </Box>
         <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
+      </Flex> */}
+
+      <Box padding={2}>
+      <GameHeading  gameQuery={gameQuery}/>
+     <Flex    marginBottom={1}  >
+        <Box marginRight={5}>
+            <PlatformSelector  selectedPlatform={gameQuery.platform} onSelectPlatform={(platform)=>setGameQuery({...gameQuery, platform})}/>
+        </Box>
+        <SortSelector  sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder)=> setGameQuery({...gameQuery,sortOrder})}/>
       </Flex>
+      </Box>
          <GameGrid gameQuery={gameQuery}  />
         </GridItem>  
     </Grid>
@@ -64,11 +76,11 @@ export default App;
 
  
  
- 
-
-//  Searching Games
+//   Adding Dynamic Heading 
 
 
-// when user types something , press enters , component notifies app component
-// save text in gameQuery and passed it on game grid
+// changed based on current filteres action -> Action Games ,
+// for platform XBox Action Games
+
+// GameHeading component
 

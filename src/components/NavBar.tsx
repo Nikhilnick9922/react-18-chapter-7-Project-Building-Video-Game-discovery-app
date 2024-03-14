@@ -23,6 +23,3 @@ export default NavBar
 
 
  
-
-//  we don't want to pass function on so many lelvel of hirarchy , that's so ugly
-//  in advance topics we will solve this problem in more elegent way
