@@ -71,10 +71,22 @@ export default App;
  
 
  
-
-//   Adding EMojis
-
-// in useGames we add rating_top 
+//   Shipping Static Data
 
 
-// new component Emoji.tsx
+
+
+// we are corrently showing 2 loading indicators genres and skeletons 
+// this is not bad thins , but it can negetively impact the user , dart around the page vision
+
+// since genresLIst not going to change we gonna make them static ,
+// so that we don't have to make extra request to backend
+
+// in netowrk tab -> genre request ->   results and copy values 
+// then in cratee folder data -> genres.ts -> export default & paste
+
+
+// now go to useGenres and replace useData with object
+
+
+// we can do same with list of platforms 

@@ -29,6 +29,4 @@ const GameCard = ({game}: GameCardProps) => {
 export default GameCard
 
  
-
-//  working , but size of thumbs up is little bit bigger than bulls eye
-//  we should render size dynamically as well  so go to emoji
+ 

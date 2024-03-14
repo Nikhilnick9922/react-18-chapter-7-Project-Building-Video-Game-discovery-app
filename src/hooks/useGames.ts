@@ -32,7 +32,7 @@ import { Genre } from "./useGenres";
                                 {genres : gameQuery.genre?.id  , 
                                 platforms : gameQuery.platform?.id ,
                                 ordering : gameQuery?.sortOrder   ,
-                                search : gameQuery?.searchText       // added here
+                                search : gameQuery?.searchText       
                             }},
                      [gameQuery])
     
@@ -41,6 +41,3 @@ import { Genre } from "./useGenres";
 export default useGames;
 
  
-//  rating is float and rating top is whole
-
-// going to add emojis based on rating
