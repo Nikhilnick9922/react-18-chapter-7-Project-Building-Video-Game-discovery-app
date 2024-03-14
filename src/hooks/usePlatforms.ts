@@ -9,8 +9,7 @@ interface Platform {
 }
 
 
-// const usePlatforms = ()=> useData<Platform>('/platforms/lists/parents')
-const usePlatforms = ()=>  ({data: platforms , error : null})
+ const usePlatforms = ()=>  ({data: platforms , error : null})
 
 
 

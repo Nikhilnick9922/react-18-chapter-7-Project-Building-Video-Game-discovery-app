@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem,  Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenereList from "./components/GenereList";
@@ -70,23 +70,13 @@ export default App;
 
  
 
+  //   Customizing the chakra themes
+
+
+//  we want darker shade for lists
+// we want to replace all gray panel with new one , which we can see in chakra -> styled compoent ->default Theme
+// for that we have tools that we can find on websites here , themera , smar Swatch , coolors or Palx
+
+
+//  so we gonna use smart Swatch
  
-//   Shipping Static Data
-
-
-
-
-// we are corrently showing 2 loading indicators genres and skeletons 
-// this is not bad thins , but it can negetively impact the user , dart around the page vision
-
-// since genresLIst not going to change we gonna make them static ,
-// so that we don't have to make extra request to backend
-
-// in netowrk tab -> genre request ->   results and copy values 
-// then in cratee folder data -> genres.ts -> export default & paste
-
-
-// now go to useGenres and replace useData with object
-
-
-// we can do same with list of platforms 

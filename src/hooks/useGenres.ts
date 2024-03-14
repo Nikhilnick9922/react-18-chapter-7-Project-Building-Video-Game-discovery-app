@@ -11,8 +11,7 @@ import genres from "../data/genres";
 
  
 
-// const useGenres = ()=> useData<Genre>('/genres');
-const useGenres = ()=>  ({data:genres,isLoading : false,  error : null});
+ const useGenres = ()=>  ({data:genres,isLoading : false,  error : null});
 
 
 export default useGenres;
@@ -20,4 +19,4 @@ export default useGenres;
 
  
 
- // we are returning this object because minimizing changes to consumer of this hook
+ 
