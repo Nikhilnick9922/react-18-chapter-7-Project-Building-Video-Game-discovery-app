@@ -70,13 +70,4 @@ export default App;
 
  
 
-  //   Customizing the chakra themes
-
-
-//  we want darker shade for lists
-// we want to replace all gray panel with new one , which we can see in chakra -> styled compoent ->default Theme
-// for that we have tools that we can find on websites here , themera , smar Swatch , coolors or Palx
-
-
-//  so we gonna use smart Swatch
- 
+//   Refacotring game Grid
