@@ -40,5 +40,4 @@ export default GameGrid
 
 
  
-//  changed spacing to 6 
- 
+  

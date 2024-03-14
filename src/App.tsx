@@ -70,8 +70,11 @@ export default App;
 
  
 
+ 
 
-// Clearing up the Game Cards 
+//   Adding EMojis
+
+// in useGames we add rating_top 
 
 
-// and spaceing between cards , so gameGrid
+// new component Emoji.tsx

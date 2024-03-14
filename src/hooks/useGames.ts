@@ -18,6 +18,7 @@ import { Genre } from "./useGenres";
     background_image :string;
     parent_platforms : {platform : Platform}[],
     metacritic : number, 
+    rating_top  : number,
 }
  
  
@@ -40,4 +41,6 @@ import { Genre } from "./useGenres";
 export default useGames;
 
  
- 
+//  rating is float and rating top is whole
+
+// going to add emojis based on rating
