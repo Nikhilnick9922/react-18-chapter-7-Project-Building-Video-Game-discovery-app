@@ -61,16 +61,13 @@ export default App;
 
  
  
-  
-//  Fixing the Issue with Chakra Menus 
-
-
-
-// Mosh getting Issue regaring Padding , but we did not get warning 
-//  this is issue he getting after he wrapped platofrmSelector & sortSelector in HStack
-
-// used Flex in place of Hstack , but how can we add space between them ? 
-// we can wrap the PlatoFormSelector in `Box` and give them rightMargin 
-// we used box to get access to css properties in chakra
-
  
+
+// Building the Search INput
+
+// For searching the games 
+
+// going to be component -> SearchINput.tsx
+
+
+// adding Input to Navbar created wrap issue for colorMode 
